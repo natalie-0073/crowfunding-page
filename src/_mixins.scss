@@ -1,0 +1,27 @@
+@mixin main-container{
+    width: 650px;
+    border-radius: 10px;
+    background-color: #Fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 40px;
+}
+@mixin btn-primary{
+    background-color: $moderate-cyan;
+    color: white;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 47px;
+    transition: all .5s;
+}
+@mixin btn-primary-hover{
+    background-color: $dark-cyan;
+    
+    cursor: pointer;
+}
+@mixin small-text{
+    color: $dark-gray;
+    font-size: 16px;
+    font-weight: 400;
+}

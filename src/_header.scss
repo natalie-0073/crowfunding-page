@@ -1,0 +1,89 @@
+@import 'variables';
+.page{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    font-size: 16px;
+    padding-bottom: 30px;
+    background-color: #FAFAFA;
+    
+}
+.header{
+    background: url("images/image-hero-desktop.jpg");
+    min-height: 55vh;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+.header-container{
+    padding: 20px 200px;
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;}
+}
+.menu-hamburger{
+    display: none;
+}
+.navbar-list{
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    &__element{
+        margin: 0px 10px;
+        
+  position: relative;
+  
+        cursor: pointer;
+        &:hover{
+            &:after{
+                transform: scaleX(1);
+  transform-origin: bottom left;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+    }
+}
+@media (max-width:1000px) {
+    .header-container{
+        padding: 20px 100px;
+    }
+}
+@media(max-width:735px){
+.header{
+    background: url("images/image-hero-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.header-container{
+    padding: 20px 80px;
+}
+.menu-hamburger{
+    display: block;
+}
+.menu-navbar{
+    display: none;
+}
+}
+@media(max-width:480px){}
+.header-container{
+    padding: 20px 30px;
+}

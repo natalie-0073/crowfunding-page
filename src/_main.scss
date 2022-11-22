@@ -1,0 +1,237 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.container-description{
+    @include main-container;
+    &__buttons{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    &__logo{
+        position: absolute;
+    transform: translateX(290px) translateY(-65px);
+    }
+    &__text{
+        text-align: center;
+    }
+}
+.container-numbers{
+    @include main-container;
+    &__chart{
+        width: 100%;
+        height: 10px;
+        background-color: $light-gray;
+        border-radius: 20px;
+        margin-top: 20px;
+        position: relative;
+        &:after{
+            content: '\A';
+    position: absolute;
+    background: $moderate-cyan;
+    top: 0; bottom: 0;
+    left: 0; 
+    width: 80%;
+    border-radius: 20px;
+        }
+    }
+    
+}
+.numbers-content{
+    display: flex;
+    justify-content: space-around;
+    &__element{
+        font-size: 2rem;
+    font-weight: 700;
+    &:nth-child(-n+2){
+        border-right: 1px solid $line-gray;
+        padding-right: 60px;
+    }
+    }
+}
+.container-about{
+    @include main-container;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__heading{
+        margin-top: 0px;
+    }
+}
+.about-text__heading{
+    margin-top: 0px;
+}
+.about-project{
+    border: 1px solid $line-gray;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: "name pledge" "description description" "left select";
+   
+    align-items: center;
+    gap: 20px;
+    &__name{
+        grid-area: name;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    &__pledge{
+        grid-area: pledge;
+        color: $moderate-cyan;
+        font-weight: 500;
+        justify-self: end;
+    }
+    &__description{
+        grid-area: description;
+    }
+    &__left{
+        grid-area: left;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+    &__select{
+        grid-area: select;
+        justify-self: end;
+    }
+    &--unavailable{
+        opacity: .5;
+    }
+}
+.text-heading{
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+}
+.text-paragraph{
+    margin-bottom: 30px;
+}
+.text-gray{
+    color: $dark-gray;
+}
+.button-bookmark{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-gray;
+    border-radius: 30px;
+    padding: 0px 15px 0px 0px;
+    font-weight: 700;
+    color: $dark-gray;
+    transition: all .2s;
+    &:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+}
+.btn-primary{
+    @include btn-primary;
+    
+    &:hover{
+        @include btn-primary-hover;
+    }
+}
+.small-text{
+    @include small-text;
+}
+.btn-unavailable{
+    @include btn-primary;
+    background-color: $dark-gray;
+}
+@media(max-width:735px){
+    .container-description{
+        width: 400px;
+        &__logo{
+            transform: translateX(180px) translateY(-65px);
+        }
+    }
+    .container-about{
+        width: 400px;
+    }
+    .container-numbers{
+        width: 400px;
+    }
+    .numbers-content__element{
+        &:nth-child(-n+2){
+            
+            padding-right: 20px;
+        }
+    }
+}
+@media(max-width:480px){
+    .container-description{
+        width: 255px;
+        &__logo{
+            transform: translateX(100px) translateY(-65px);
+        }
+    }
+    .container-about{
+        width: 255px;
+    }
+    .container-numbers{
+        width: 255px;
+    }
+   
+    .button-bookmark__span{
+        display: none;
+    }
+    .button-bookmark{
+        width: fit-content;
+        padding: 0;
+    }
+    .numbers-content{
+        flex-direction: column;
+        text-align: center;
+        &__element{
+            position: relative;
+            padding-bottom: 10px;
+            &:nth-child(-n+2){
+                padding-right: 0;
+                border-right: none;
+                &::after{
+                    content: "";
+                background: $line-gray;
+                position: absolute;
+                bottom: 0;
+                left: 40%;
+                 height: 1px;
+                width: 50px;
+                }
+            }
+        }
+    }
+    .about-project{
+        grid-template-areas: "name" "pledge" "description" "left" "select";
+   gap: 15px;
+   
+   
+    &__pledge{
+        justify-self: start;
+    }
+    
+    &__select{
+        justify-self: start;
+    }
+    }
+    .text-heading{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .container-description{
+        width: 200px;
+        &__logo{
+            transform: translateX(80px) translateY(-65px);
+        }
+        
+    }
+    .container-about{
+        width: 200px;
+    }
+    .container-numbers{
+        width: 200px;
+    }
+}
