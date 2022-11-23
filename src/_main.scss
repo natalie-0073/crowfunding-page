@@ -13,8 +13,11 @@
     align-items: center;
     }
     &__logo{
-        position: absolute;
-    transform: translateX(290px) translateY(-65px);
+    //     position: absolute;
+    // transform: translateX(290px) translateY(-65px);
+   position:absolute;
+   left: calc(50% - 22px);
+   transform: translateY(-65px);
     }
     &__text{
         text-align: center;
@@ -143,36 +146,37 @@
 }
 @media(max-width:735px){
     .container-description{
-        width: 400px;
+        
         &__logo{
-            transform: translateX(180px) translateY(-65px);
+            // transform: translateX(180px) translateY(-65px);
         }
     }
     .container-about{
-        width: 400px;
+        
     }
     .container-numbers{
-        width: 400px;
+        
     }
     .numbers-content__element{
+        padding-left: 10px;
         &:nth-child(-n+2){
             
             padding-right: 20px;
         }
     }
 }
-@media(max-width:480px){
+@media(max-width:640px){
     .container-description{
-        width: 255px;
+        
         &__logo{
-            transform: translateX(100px) translateY(-65px);
+            // transform: translateX(100px) translateY(-65px);
         }
     }
     .container-about{
-        width: 255px;
+        
     }
     .container-numbers{
-        width: 255px;
+        
     }
    
     .button-bookmark__span{
@@ -222,16 +226,16 @@
 }
 @media(max-width:340px){
     .container-description{
-        width: 200px;
+        
         &__logo{
-            transform: translateX(80px) translateY(-65px);
+            // transform: translateX(80px) translateY(-65px);
         }
         
     }
     .container-about{
-        width: 200px;
+        
     }
     .container-numbers{
-        width: 200px;
+        
     }
 }

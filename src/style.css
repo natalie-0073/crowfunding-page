@@ -93,11 +93,13 @@
 }
 
 .container-description {
-  width: 650px;
+  width: 50%;
   border-radius: 10px;
   background-color: #Fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 40px;
+  position: relative;
+  top: -70px;
 }
 .container-description__buttons {
   display: flex;
@@ -106,18 +108,21 @@
 }
 .container-description__logo {
   position: absolute;
-  transform: translateX(290px) translateY(-65px);
+  left: calc(50% - 22px);
+  transform: translateY(-65px);
 }
 .container-description__text {
   text-align: center;
 }
 
 .container-numbers {
-  width: 650px;
+  width: 50%;
   border-radius: 10px;
   background-color: #Fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 40px;
+  position: relative;
+  top: -70px;
 }
 .container-numbers__chart {
   width: 100%;
@@ -152,11 +157,13 @@
 }
 
 .container-about {
-  width: 650px;
+  width: 50%;
   border-radius: 10px;
   background-color: #Fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 40px;
+  position: relative;
+  top: -70px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -269,35 +276,14 @@
 }
 
 @media (max-width: 735px) {
-  .container-description {
-    width: 400px;
-  }
-  .container-description__logo {
-    transform: translateX(180px) translateY(-65px);
-  }
-  .container-about {
-    width: 400px;
-  }
-  .container-numbers {
-    width: 400px;
+  .numbers-content__element {
+    padding-left: 10px;
   }
   .numbers-content__element:nth-child(-n+2) {
     padding-right: 20px;
   }
 }
-@media (max-width: 480px) {
-  .container-description {
-    width: 255px;
-  }
-  .container-description__logo {
-    transform: translateX(100px) translateY(-65px);
-  }
-  .container-about {
-    width: 255px;
-  }
-  .container-numbers {
-    width: 255px;
-  }
+@media (max-width: 640px) {
   .button-bookmark__span {
     display: none;
   }
@@ -340,19 +326,5 @@
   }
   .text-heading {
     font-size: 1.4rem;
-  }
-}
-@media (max-width: 340px) {
-  .container-description {
-    width: 200px;
-  }
-  .container-description__logo {
-    transform: translateX(80px) translateY(-65px);
-  }
-  .container-about {
-    width: 200px;
-  }
-  .container-numbers {
-    width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */

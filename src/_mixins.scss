@@ -1,9 +1,11 @@
 @mixin main-container{
-    width: 650px;
+    width: 50%;
     border-radius: 10px;
     background-color: #Fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 40px;
+    position: relative;
+    top: -70px;
 }
 @mixin btn-primary{
     background-color: $moderate-cyan;
