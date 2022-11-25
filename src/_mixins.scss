@@ -27,3 +27,39 @@
     font-size: 16px;
     font-weight: 400;
 }
+@mixin projects{
+    border: 1px solid $line-gray;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: "name pledge" "description description" "left select";
+   
+    align-items: center;
+    gap: 20px;
+    &__name{
+        grid-area: name;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    &__pledge{
+        grid-area: pledge;
+        color: $moderate-cyan;
+        font-weight: 500;
+        justify-self: end;
+    }
+    &__description{
+        grid-area: description;
+    }
+    &__left{
+        grid-area: left;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+    &__select{
+        grid-area: select;
+        justify-self: end;
+    }
+    &--unavailable{
+        opacity: .5;
+    }
+}

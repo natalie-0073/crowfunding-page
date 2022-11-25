@@ -1,0 +1,34 @@
+.completed{
+    display: none;
+    z-index: 1;
+    /* margin: auto; */
+    position: absolute;
+    /* background-color: white; */
+    /* max-width: 40%; */
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.completed-container{
+    max-width: 25%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media(max-width:900px){
+    .completed-container{
+        max-width: 40%;
+    }
+}
+@media(max-width:450px){
+    .completed-container{
+        max-width: 60%;
+    }
+}

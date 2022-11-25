@@ -11,8 +11,151 @@
     <title>Crowfunding page</title>
 </head>
 <body class="page">
+    <div class="overlay"></div>
+    <div class="completed">
+        <div class="completed-container">
+            <div class="completed-container__img"><img src="src/images/icon-check.svg"/></div>
+            <div class="completed-container__text">
+                <h3 class="container-text__thank">Thanks for your support!</h3>
+                <p class="container-text__message text-gray">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+                    an email once our campaign is completed.</p>
+            </div>
+            <div class="completed-container__btn">
+                <button class="btn-primary">Got it!</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        
+        <div class="popup-container">
+            <div class="popup-close">
+                <img class="popup-close__img"src="src/images/icon-close-modal.svg"/>
+            </div>
+            <div class="container-text">
+                <h3 class="container-text__heading">Back this project</h3>
+                <p class="container-text__paragraph text-gray">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+            </div>
+            <div class="container-projects">
+                
+                    
+                    <div class="popup-project">
+                        <input type="radio" class="popup-project__radio"  name="project"/>
+                        <div class="popup-project__name">Pledge with no reward</div>
+                        
+                        <div class="popup-project__description text-gray">Choose to support us without a reward if you simply believe in our project. As a backer, 
+                            you will be signed up to receive product updates via email.</div>
+                            <div class="project-selected">
+                                <div class="selected-enter text-gray">Enter your pledge</div>
+                                <div class="selected-info">
+                                    <form class="selected-info__form">
+                                    <div class="selected-input">
+                                        <label class="selected-input__label">$</label>
+                                    <!-- <div class="info-form__input"> -->
+                                        <input type="text" class="popup-input" value=""/>
+                                        
+                                    </div>
+                                    <!-- <div class="info-form__button"> -->
+                                        <button type="submit" class="popup-button">Continue</button>
+                                    <!-- </div> -->
+                                </form>
+                                </div>
+                             </div>
+                    
+                    </div>
+                    
+                    <div class="popup-project">
+                        <input type="radio" class="popup-project__radio" name="project"/>
+                        <div class="popup-project__name">Bamboo Stand</div>
+                        <div class="popup-project__pledge">Pledge $25 or more</div>
+                        <div class="popup-project__description text-gray">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+                            you’ll be added to a special Backer member list.</div>
+                        <div class="popup-project__left">101 <span class="small-text">left</span></div>
+                        
+                        <div class="project-selected">
+                            <div class="selected-enter text-gray">Enter your pledge</div>
+                            <div class="selected-info">
+                                <form class="selected-info__form">
+                                <div class="selected-input">
+                                    <label class="selected-input__label">$</label>
+                                <!-- <div class="info-form__input"> -->
+                                    <input type="text" class="popup-input" value="25"/>
+                                    
+                                </div>
+                                <!-- <div class="info-form__button"> -->
+                                    <button type="submit" class="popup-button">Continue</button>
+                                <!-- </div> -->
+                            </form>
+                            </div>
+                    </div>
+                       
+                    </div>
+                    
+                    <div class="popup-project">
+                        <input type="radio" class="popup-project__radio" name="project"/>
+                        <div class="popup-project__name">Black Edition Stand
+                            </div>
+                        <div class="popup-project__pledge">Pledge $75 or more
+                           </div>
+                        <div class="popup-project__description text-gray"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                            member list. Shipping is included.
+                           </div>
+                        <div class="popup-project__left"> 64 <span class="small-text">left</span></div>
+                        <div class="project-selected">
+                            <div class="selected-enter text-gray">Enter your pledge</div>
+                            <div class="selected-info">
+                                <form class="selected-info__form">
+                                <div class="selected-input">
+                                    <label class="selected-input__label">$</label>
+                                <!-- <div class="info-form__input"> -->
+                                    <input type="text" class="popup-input" value="75"/>
+                                    
+                                </div>
+                                <!-- <div class="info-form__button"> -->
+                                    <button type="submit"class="popup-button">Continue</button>
+                                <!-- </div> -->
+                            </form>
+                            </div>
+                    </div>
+                        
+                    </div>
+                    
+                    <div class="popup-project about-project--unavailable">
+                        <input type="radio" class="popup-project__radio" name="project" disabled/>
+                    <div class="popup-project__name">Mahogany Special Edition
+                    </div>
+                <div class="popup-project__pledge">Pledge $200 or more
+                   </div>
+                <div class="popup-project__description text-gray"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+                    to our Backer member list. Shipping is included.
+                    </div>
+                <div class="popup-project__left">0 <span class="small-text">left</span></div>
+                
+                </div>
+                
+
+                
+               
+                
+                
+                    
+                   
+                
+            </div>
+        </div>
+    </div>
+    <div class="dropdown unactive">
+        
+        <ul class="dropdown-list">
+            <li class="dropdown-list__element">About</li>
+            
+            <li class="dropdown-list__element">Discover</li>
+            
+            <li class="dropdown-list__element">Get started</li>
+        </ul>
     
+    </div>
     <header class="header">
+        
         <div class="header-container">
         <div class="header-container__menu">
             <div class="menu-logo"><img src="src/images/logo.svg"/></div>
@@ -39,7 +182,7 @@
             </div>
                 <div class="container-description__buttons">
                     <button class="button-back btn-primary">Back this project</button>
-                    <div class="button-bookmark"><img src="src/images/icon-bookmark.svg"/><span class="button-bookmark__span">Bookmark</span></div>
+                    <div class="button-bookmark"><img class="button-bookmark__img" src="src/images/icon-bookmark.svg"/><span class="button-bookmark__span">Bookmark</span></div>
                 </div>
             </div>
             <div class="container-numbers">
@@ -96,6 +239,6 @@
             </div>
         </div>
     </main>
-    
+    <script src="index.js"></script>
 </body>
 </html>

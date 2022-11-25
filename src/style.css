@@ -1,3 +1,316 @@
+.dropdown {
+  position: absolute;
+  background-color: white;
+  right: 5%;
+  top: 8%;
+  border-radius: 5px;
+}
+
+.unactive {
+  display: none;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  font-weight: 500;
+  list-style: none;
+  width: 200px;
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown-list__element {
+  padding: 10px;
+  position: relative;
+}
+.dropdown-list__element:nth-child(-n+2)::after {
+  content: "";
+  background: rgb(220, 220, 220);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.8px;
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.5;
+  background-color: black;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.popup-close {
+  transform: translateY(-9px);
+  position: relative;
+  left: 50%;
+  cursor: pointer;
+}
+
+.container-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-project {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "name pledge" "description description" "left select";
+  align-items: center;
+  gap: 20px;
+  gap: 10px;
+  grid-template-areas: "radio name pledge left" "radio description description description" "selected selected selected selected";
+  grid-template-columns: 0.2fr 1fr 1fr 1fr;
+}
+.popup-project__name {
+  grid-area: name;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.popup-project__pledge {
+  grid-area: pledge;
+  color: hsl(176deg, 50%, 47%);
+  font-weight: 500;
+  justify-self: end;
+}
+.popup-project__description {
+  grid-area: description;
+}
+.popup-project__left {
+  grid-area: left;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.popup-project__select {
+  grid-area: select;
+  justify-self: end;
+}
+.popup-project--unavailable {
+  opacity: 0.5;
+}
+.popup-project__name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.popup-project__name:hover {
+  color: hsl(176deg, 50%, 47%);
+  cursor: pointer;
+}
+.popup-project__pledge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  justify-self: start;
+}
+.popup-project__left {
+  font-size: 1rem;
+  font-weight: 800;
+  justify-self: end;
+}
+.popup-project__description {
+  font-size: 0.9rem;
+}
+.popup-project__radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  margin: 0;
+  color: rgb(220, 220, 220);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+.popup-project__radio:before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: hsl(176deg, 50%, 47%);
+}
+.popup-project__radio:checked::before {
+  transform: scale(1);
+}
+
+.project-selected {
+  grid-area: selected;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.project-selected::before {
+  content: "";
+  width: 100%;
+  height: 0.3px;
+  background-color: rgb(220, 220, 220);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.selected-info {
+  position: relative;
+}
+
+.selected-info__form {
+  display: flex;
+  gap: 10px;
+}
+
+.unactive {
+  display: none;
+}
+
+.popup-input {
+  padding-left: 40px;
+  height: 44px;
+  border-radius: 50px;
+  border: 1px solid rgb(220, 220, 220);
+  font-family: "Commissioner", sans-serif;
+  font-weight: 700;
+  color: black;
+  max-width: 60px;
+}
+
+.selected-input__label {
+  padding-right: 10px;
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  font-weight: 700;
+  color: rgb(220, 220, 220);
+}
+
+.popup-button {
+  background-color: hsl(176deg, 50%, 47%);
+  color: white;
+  font-weight: 700;
+  border-radius: 30px;
+  border: none;
+  width: 150px;
+  height: 47px;
+  transition: all 0.5s;
+  transition: all 0.2s;
+  width: 100px;
+}
+.popup-button:hover {
+  background-color: hsl(176deg, 72%, 28%);
+  cursor: pointer;
+}
+
+.container-text__heading {
+  margin-top: 0px;
+}
+
+.container-text__paragraph {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .popup-project {
+    grid-template-areas: "radio name name name" "radio pledge pledge pledge" "description description description description" "left left left left" "selected selected selected selected";
+  }
+  .popup-project__left {
+    justify-self: self-start;
+  }
+  .popup-container {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .project-selected {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+  .selected-enter {
+    padding: 10px 0px;
+  }
+}
+@media (max-width: 370px) {
+  .popup-input {
+    width: 40px;
+  }
+  .popup-button {
+    width: 70px;
+  }
+}
+.completed {
+  display: none;
+  z-index: 1;
+  /* margin: auto; */
+  position: absolute;
+  /* background-color: white; */
+  /* max-width: 40%; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.completed-container {
+  max-width: 25%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .completed-container {
+    max-width: 40%;
+  }
+}
+@media (max-width: 450px) {
+  .completed-container {
+    max-width: 60%;
+  }
+}
 .page {
   margin: 0;
   display: flex;
@@ -148,6 +461,7 @@
   justify-content: space-around;
 }
 .numbers-content__element {
+  padding-left: 10px;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -275,6 +589,15 @@
   background-color: hsl(0deg, 0%, 48%);
 }
 
+.bookmarked {
+  background-color: #F4F4F4;
+  color: hsl(176deg, 72%, 28%);
+  width: 160px;
+}
+.bookmarked--img {
+  content: url("images/icon-bookmarked.svg");
+}
+
 @media (max-width: 735px) {
   .numbers-content__element {
     padding-left: 10px;
@@ -310,7 +633,7 @@
     background: rgb(220, 220, 220);
     position: absolute;
     bottom: 0;
-    left: 40%;
+    left: calc(50% - 20px);
     height: 1px;
     width: 50px;
   }
@@ -326,5 +649,10 @@
   }
   .text-heading {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 400px) {
+  .btn-primary, .btn-unavailable {
+    width: 120px;
   }
 }/*# sourceMappingURL=style.css.map */
