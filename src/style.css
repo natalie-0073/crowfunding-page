@@ -173,7 +173,7 @@
 .project-selected {
   grid-area: selected;
   padding-top: 20px;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -247,6 +247,10 @@
   font-size: 0.9rem;
 }
 
+.popup-project__radio:checked ~ .project-selected {
+  display: flex;
+}
+
 @media (max-width: 720px) {
   .popup-project {
     grid-template-areas: "radio name name name" "radio pledge pledge pledge" "description description description description" "left left left left" "selected selected selected selected";
@@ -285,19 +289,19 @@
   /* max-width: 40%; */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  width: 98vw;
 }
 
 .completed-container {
-  max-width: 25%;
+  max-width: 30%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
 }
 

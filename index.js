@@ -12,6 +12,7 @@ const completed =document.querySelector(".completed");
 const forms=document.querySelectorAll(".selected-info__form");
 const gotIt=document.querySelector(".completed-container__btn");
 
+
 gotIt.addEventListener('click', ()=>{
     overlay.style.display="none";
     completed.style.display="none";
@@ -25,16 +26,6 @@ popup.style.display="none";
 completed.style.display="flex";
 })
 })
-
-// popupContinue.forEach((popupButton)=>{
-//     popupButton.addEventListener('click', ()=>{
-//         popup.style.display="none";
-//         overlay.style.display="block";
-// completed.style.display="flex";
-//     })
-// })
-
-
 
 popupClose.addEventListener('click', ()=>{
     popup.style.display="none";
@@ -57,8 +48,6 @@ hamburger.addEventListener('click', ()=>{
         }
     
 })
-
-
 
 bookmark.addEventListener('click', ()=>{
     bookmark.classList.toggle("bookmarked");
