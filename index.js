@@ -7,7 +7,6 @@ const btnBack=document.querySelector(".button-back");
 const popup=document.querySelector(".popup");
 const overlay=document.querySelector(".overlay");
 const popupClose=document.querySelector(".popup-close");
-const popupContinue=document.querySelectorAll(".popup-button");
 const completed =document.querySelector(".completed");
 const forms=document.querySelectorAll(".selected-info__form");
 const gotIt=document.querySelector(".completed-container__btn");
